@@ -35,7 +35,7 @@ on:
       - '"main"'
 
 env:
-  PROJECT_ID: 'my-project' # TODO: update to your Google Cloud project ID
+  PROJECT_ID: 'micro-shift-449410-a1' # TODO: update to your Google Cloud project ID
   NAME : 'evensprojectmca'
   REGION: 'asia-south1' # TODO: update to your region
   SERVICE: 'evensprojectmca' # TODO: update to your service name

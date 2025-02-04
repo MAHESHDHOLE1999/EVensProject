@@ -3,9 +3,6 @@ FROM node:20 AS build
 
 WORKDIR /app
 
-# Install global dependencies (Vite and others)
-RUN npm install -g vite
-
 # Install dependencies
 COPY package.json package-lock.json ./
 RUN npm install
@@ -19,12 +16,22 @@ RUN npm run build
 # Step 2: Serve the React app using Nginx
 FROM nginx:alpine
 
-# Copy the build files from the previous stage to the nginx directory
-COPY --from=build /app/dist /usr/share/nginx/html
+# Set working directory
+WORKDIR /usr/share/nginx/html
 
-# Expose port 80
+# Remove default Nginx static files
+RUN rm -rf ./*
+
+# Copy the built React files from the build stage
+COPY --from=build /app/dist .
+
+# Copy the custom Nginx configuration file
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# Expose port 8080 for Cloud Run
 EXPOSE 8080
 
-# Start nginx
+# Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
+
 

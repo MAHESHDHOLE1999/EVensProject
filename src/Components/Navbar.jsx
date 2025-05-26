@@ -88,7 +88,7 @@ const Navbar = () => {
               <IoCallSharp className="size-3 md:size-6 md:p-1 lg:size-9 lg:p-2 text-white rounded-full bg-bgColor" />
               <div>
                 <p className="text-[6px] md:text-xs lg:text-sm font-bold">Phone No.</p>
-                <p className="text-[6px] md:text-xs lg:text-sm font-normal">+91 8805535713</p>
+                <p className="text-[6px] md:text-xs lg:text-sm font-normal">+91 9168520943</p>
               </div>
             </div>
 

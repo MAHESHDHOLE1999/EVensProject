@@ -53,7 +53,7 @@ const ContactUs = () => {
           <IoCallSharp className="size-6 p-1 md:size-7 md:p-1 lg:size-9 lg:p-2 text-white rounded-full bg-bgColor" />
           <div>
             <p className="md:text-sm lg:text-sm font-bold">Phone No.</p>
-            <p className="md:text-xs lg:text-sm font-normal">+91 8805535713</p>
+            <p className="md:text-xs lg:text-sm font-normal">+91 9168520943</p>
           </div>
         </div>
       </div>
